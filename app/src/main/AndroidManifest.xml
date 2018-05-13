@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.deacons_droid">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".api.ui.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                android:windowSoftInputMode="adjustPan"
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".api.ui.MainActivity" />
+        <activity
+            android:name=".api.ui.Feed2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_feed2"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateUnchanged|adjustNothing" />
+        <activity android:name=".api.ui.Register" />
+
+        <activity android:name=".api.ui.Team_profile"></activity>
+        <receiver android:process=":remote" android:name=".Alarm"></receiver>
+    </application>
+
+</manifest>
